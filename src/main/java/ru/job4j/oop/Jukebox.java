@@ -16,6 +16,5 @@ public class Jukebox {
         Jukebox song = new Jukebox();
         int a = 2;
         song.music(a);
-
     }
 }
