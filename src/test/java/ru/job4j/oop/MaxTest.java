@@ -17,13 +17,13 @@ public class MaxTest {
     public void summation() {
         int expected = 3;
         Max first = new Max();
-        int res = first.summation(1, 2);
+        int res = first.summation(1, 2, 3);
         Assert.assertEquals(expected, res);
     }
 
     @Test
     public void testSummation() {
-        int expected = 5;
+        int expected = 2;
         Max first = new Max();
         int res = first.summation(1, 2, 2);
         Assert.assertEquals(expected, res);
@@ -31,7 +31,7 @@ public class MaxTest {
 
     @Test
     public void testSummation1() {
-        int expected = 7;
+        int expected = 2;
         Max first = new Max();
         int res = first.summation(1, 2, 2, 2);
         Assert.assertEquals(expected, res);
