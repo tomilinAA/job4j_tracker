@@ -6,17 +6,32 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PointTest {
+    @Test
+    public void when000to202then2dot83() {
+        double expected = 2.83;
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(2, 0, 2);
+        double out = a.distance3d(b);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when000to200then2() {
+        double expected = 2;
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(2, 0, 0);
+        double out = a.distance3d(b);
+        Assert.assertEquals(expected, out, 0.01);
+    }
 
     @Test
         public void when00to20then2() {
-            int expected = 4;
-            Point a = new Point(0, 2);
-            Point b = new Point(0, 2);
-            Point c = new Point(0, 3);
+            int expected = 2;
+            Point a = new Point(0, 0);
+            Point b = new Point(2, 0);
             double out = a.distance(b);
-            double out1 = a.distance3d(c);
-            Assert.assertEquals(expected, out1, 0.01);
-        }
+            Assert.assertEquals(expected, out, 0.01);
+    }
 
     @Test
     public void when04to23then2dot23() {
