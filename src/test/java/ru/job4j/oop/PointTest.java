@@ -9,11 +9,13 @@ public class PointTest {
 
     @Test
         public void when00to20then2() {
-            int expected = 2;
-            Point a = new Point(0, 0);
+            int expected = 4;
+            Point a = new Point(0, 2);
             Point b = new Point(0, 2);
+            Point c = new Point(0, 3);
             double out = a.distance(b);
-            Assert.assertEquals(expected, out, 0.01);
+            double out1 = a.distance3d(c);
+            Assert.assertEquals(expected, out1, 0.01);
         }
 
     @Test
