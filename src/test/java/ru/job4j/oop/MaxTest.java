@@ -21,7 +21,6 @@ public class MaxTest {
         Assert.assertEquals(expected, res);
     }
 
-
     @Test
     public void testSummation() {
         int expected = 2;
