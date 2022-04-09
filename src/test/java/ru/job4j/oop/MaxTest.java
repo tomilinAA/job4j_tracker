@@ -14,26 +14,26 @@ public class MaxTest {
     }
 
     @Test
-    public void summation() {
+    public void max() {
         int expected = 3;
         Max first = new Max();
-        int res = first.summation(1, 2, 3);
+        int res = first.max(1, 2, 3);
         Assert.assertEquals(expected, res);
     }
 
     @Test
-    public void testSummation() {
+    public void testMax() {
         int expected = 2;
         Max first = new Max();
-        int res = first.summation(1, 2, 2);
+        int res = first.max(1, 2, 2);
         Assert.assertEquals(expected, res);
     }
 
     @Test
-    public void testSummation1() {
+    public void testMax1() {
         int expected = 2;
         Max first = new Max();
-        int res = first.summation(1, 2, 2, 2);
+        int res = first.max(1, 2, 2, 2);
         Assert.assertEquals(expected, res);
     }
 }
