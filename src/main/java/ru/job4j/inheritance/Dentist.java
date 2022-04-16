@@ -7,8 +7,4 @@ public class Dentist extends Doctor {
         super(name, surname, education, birthday, mag);
         this.isNotRussianDantist = isNotRussianDantist;
     }
-
-    public Dentist(String isNotRussianDantist) {
-        this.isNotRussianDantist = isNotRussianDantist;
-    }
 }

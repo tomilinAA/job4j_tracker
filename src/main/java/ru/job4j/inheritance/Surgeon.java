@@ -8,10 +8,6 @@ public class Surgeon extends Doctor {
         this.money = money;
     }
 
-    public Surgeon(String money) {
-        this.money = money;
-    }
-
     public String getMoney() {
         return money;
     }
