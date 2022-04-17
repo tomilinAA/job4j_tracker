@@ -24,7 +24,7 @@ public class Library {
 
         System.out.println(System.lineSeparator() + "If you want clean code");
         for (Book lib : library) {
-            if (lib.getName().equals("Clean code")) {
+            if ("Clean code".equals(lib.getName())) {
                 System.out.println(lib.getName() + " : " + lib.getPages());
             }
         }
