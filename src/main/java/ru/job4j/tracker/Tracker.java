@@ -21,6 +21,20 @@ public class Tracker {
         return b;
     }
 
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        int start = index + 1;
+        int distPos = index;
+        int length = size - index - 1;
+        boolean rsl = index != -1;
+        if (rsl) {
+            System.arraycopy(items, start, items, distPos, length);
+            items[size - 1] = null;
+            size--;
+        }
+        return rsl;
+    }
+
     private int indexOf(int id) {
         int rsl = -1;
         for (int index = 0; index < size; index++) {
