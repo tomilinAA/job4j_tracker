@@ -15,10 +15,11 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        id = item.getId();
-        items[index].setName(item.getName());
-        boolean b = indexOf(id) > -1;
-        return b;
+        if(index != -1) {
+            item.setId(id);
+            items[index] = item;
+        }
+        return index != -1;
     }
 
     public boolean delete(int id) {
