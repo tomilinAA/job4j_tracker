@@ -1,13 +1,14 @@
 package ru.job4j.tracker;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class StartUI {
     public void init(Scanner scanner, Tracker tracker) {
        boolean run = true;
        while (run) {
            showMenu();
-           System.out.println("Select: ");
+           System.out.print("Select: ");
            int select = Integer.parseInt(scanner.nextLine());
            if (select == 0) {
                System.out.println("=== Create a new Item ===");
@@ -18,6 +19,16 @@ public class StartUI {
                System.out.println("Добавленная заявка: " + item);
            } else if (select == 6) {
                run = false;
+           } else if (select == 1) {
+               System.out.println("=== Show all items ===");
+               Item[] items = tracker.findAll();
+               if (items.length > 0) {
+               for (Item item : items) {
+                   System.out.println(item);
+               }
+           } else {
+                   System.out.println("Хранилище еще не содержит заявок");
+               }
            }
        }
     }
@@ -33,7 +44,6 @@ public class StartUI {
             System.out.println(i + ". " + menu[i]);
 
     }
-
 }
 
     public static void main(String[] args) {
