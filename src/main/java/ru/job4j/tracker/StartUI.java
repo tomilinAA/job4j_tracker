@@ -29,8 +29,6 @@ public class StartUI {
                } else {
                    System.out.println("Ошибка замены заявки");
                }
-           } else if (select == 6) {
-               run = false;
            } else if (select == 1) {
                System.out.println("=== Show all items ===");
                Item[] items = tracker.findAll();
@@ -38,9 +36,11 @@ public class StartUI {
                for (Item item : items) {
                    System.out.println(item);
                }
-           } else {
+               } else {
                    System.out.println("Хранилище еще не содержит заявок");
                }
+           } else if (select == 6) {
+               run = false;
            }
        }
     }
