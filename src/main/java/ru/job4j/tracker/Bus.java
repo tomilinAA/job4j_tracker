@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 public class Bus implements Transport {
-
     @Override
     public void goStraight() {
         System.out.println("Прямо");
